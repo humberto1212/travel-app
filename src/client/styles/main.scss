@@ -1,0 +1,161 @@
+@mixin tablet {
+    @media screen and (min-width: 667px) {
+        @content;
+    }
+}
+
+@mixin tablet-longScreen {
+    @media screen and (min-width: 1365px) {
+        @content;
+    }
+}
+
+@mixin monitor {
+    @media screen and (min-width: 1500px) {
+        @content;
+    }
+}
+
+body {
+    background-color: #F5F5F8;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .input-container {
+        display: grid;
+        grid-template-columns: 100px 100px auto 100px 100px;
+        grid-template-rows: 20px 20px auto 20px 20px;
+        height: 100px;
+        width: 300px;
+    
+        .location-container {
+            grid-column: 1;
+            input{
+                background-color: #EFEEEE;
+                border-radius: 30px;
+                width: 150px;
+                height: 25px;
+                border:none;
+            }
+        }
+
+        .date-container {
+            grid-column: 4/5;
+            input{
+                background-color: #EFEEEE;
+                border-radius: 30px;
+                width: 150px;
+                height: 25px;
+                border:none;
+                margin-right: 20px;
+            }
+        }
+
+        .submit {
+            grid-row: 4;
+            grid-column: 1;
+            button{
+                border-radius: 30px;
+                width: 100px;
+                height: 25px;
+                border:none;
+                background: #FFFFFF;
+            }
+        }
+    }
+
+    .result-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60px;
+        margin-left: 50px;
+        background-color: #FFFFFF;
+        width: 300px;
+        height: 280px;
+        border-radius: 30px;
+
+            #result-img {
+                width: 150px;
+                height: 150px;
+                background-color: red;
+                border-radius: 100px;
+                margin-top: -50px;
+            }
+    }
+}
+
+@include tablet{
+
+
+    .main-container{
+      height: 1000px;
+      width: 1000px;
+        .input-container {
+            grid-template-columns: 150px 150px auto 150px 150px;
+            grid-template-rows: 50px 50px auto 50px 50px;
+            margin-right: 200px;
+            margin-top: 50px;
+    
+            .location-container {
+                font-size: 28px;
+                input{
+                    font-size: 25px;
+                    width: 200px;
+                    height: 40px;
+                }
+            }
+
+            .date-container {
+                font-size: 28px;
+                input{
+                    font-size: 25px;
+                    width: 200px;
+                    height: 40px;
+                }
+            }
+
+            .submit {
+                button{
+                    font-size: 25px;
+                    width: 140px;
+                    height: 40px;
+                }
+            }
+        }
+
+        .result-container {
+            width: 500px;
+            height: 480px;
+            margin-top: 200px;
+
+                #result-img {
+                    width: 250px;
+                    height: 250px;
+                    border-radius: 120px;
+                    margin-top: -90px;
+                }
+        }
+    }   
+  
+}
+
+@include tablet-longScreen {
+
+
+    .main-container{
+          width: 1400px;
+      }       
+}
+
+@include monitor {
+
+
+    .main-container{
+          width: 1900px;
+      }       
+}
