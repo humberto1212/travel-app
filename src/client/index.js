@@ -1,3 +1,4 @@
 import {action} from './js/app.js'
 
-alert("I Exist")
+import './styles/header.scss'
+import './styles/main.scss'
