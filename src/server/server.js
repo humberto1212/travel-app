@@ -40,6 +40,12 @@ const UrlPix = "";
 const GeoKey = process.env.KEY_GEO;
 const WeatherKey = process.env.KEY_WEATHER;
 
+//current date for comparison
+const d = new Date();
+const dayCurrent = d.getDate();
+const monthCurrent = d.getMonth()+1;
+const yearCurrent = d.getFullYear();
+
 app.post('/travel', async function(req, res){
    const {location, date } = req.body
    const respLocation = await fetch (UrlGeo+location+"&maxRows=1&username="+GeoKey)
