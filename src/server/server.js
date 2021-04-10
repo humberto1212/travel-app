@@ -1,3 +1,5 @@
+import {datePlan} from '../server/dateTravel.js'
+
 const fetch = require('node-fetch')
 
 // Express to run server and routes
@@ -48,6 +50,13 @@ const yearCurrent = d.getFullYear();
 
 app.post('/travel', async function(req, res){
    const {location, date } = req.body
+   
+   //imported function datePlan
+   const { yearPlan, monthPlan, dayPlan} = datePlan(date);
+    console.log(yearPlan) 
+    console.log(monthPlan)
+    console.log(dayPlan)
+   
    const respLocation = await fetch (UrlGeo+location+"&maxRows=1&username="+GeoKey)
    try {
        const data = await respLocation.json();
