@@ -174,6 +174,31 @@ app.post('/travel', async function(req, res){
             }catch(error){
             console.log('error', error)
             }
+        
+            // restcountries API for Countries Information
+            const respCountry = await fetch (Urlcountry+countryName)
+            try {
+                const dataCountry = await respCountry.json();
+
+    
+                const {name}  = dataCountry[0]
+                const { currencies } = dataCountry[0]
+                const money = currencies[0].name
+                const { languages } = dataCountry[0]
+                const leng  = languages[0].name
+
+                const countryResults = {
+                name,
+                money,
+                leng
+                }
+
+                console.log(countryResults)
+                travelData.unshift(countryResults);
+    
+            }catch(error){
+                console.log('error', error)
+            }
 
     }catch(error){
         console.log('error', error)
