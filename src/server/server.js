@@ -156,6 +156,24 @@ app.post('/travel', async function(req, res){
 
                 travelData.unshift(weatherResults)
             }
+        
+            // Pixabay API for Images
+            const respImg = await fetch (UrlPix+"key="+PixKey+"&q="+countryName+"+"+"tradition")
+            try {
+                const dataImage = await respImg.json();
+
+                const { webformatURL } = dataImage.hits[0]
+
+                const Imageresult = {
+                    webformatURL
+                }
+
+                console.log(Imageresult)
+                travelData.unshift(Imageresult);
+    
+            }catch(error){
+            console.log('error', error)
+            }
 
     }catch(error){
         console.log('error', error)
