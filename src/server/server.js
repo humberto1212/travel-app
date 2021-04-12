@@ -204,3 +204,6 @@ app.post('/travel', async function(req, res){
         console.log('error', error)
     }
 })   
+
+//Get Route: data is sent
+app.get('/response', (req, res)=>{res.send(travelData);});
