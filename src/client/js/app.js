@@ -28,6 +28,9 @@ function action() {
     const myDate = document.getElementById('date').value;
 
     postData('http://localhost:8081/travel', {location: newLocation, date: myDate})
+    .then(() =>{
+        updateUI() 
+   }) 
 }
 
 export {action}
