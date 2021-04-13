@@ -1,4 +1,4 @@
-import {datePlan} from '../server/dateTravel.js'
+const datePlan = require("./dateTravel.js");
 
 let travelData = [ ];
 
