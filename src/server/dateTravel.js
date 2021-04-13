@@ -7,4 +7,4 @@
     return {yearPlan, monthPlan, dayPlan}   
 }
 
-export { datePlan } 
+module.exports =  datePlan  
