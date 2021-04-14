@@ -63,15 +63,14 @@ const fullYearActual = yearActual + "-" + monthActual + "-" + dayActual
 const fullYearActual_6 = yearActual + "-" + monthActual + "-" + dayActual_6 
 const fullYearActual_16 = yearActual + "-" + monthActual + "-" + dayActual_16
 
-
 // Post request
+
 app.post('/travel', async function(req, res){
     const {location, date } = req.body
 
     const { yearPlan, monthPlan, dayPlan, fullYearPlan} = datePlan(date);
     
     console.log(fullYearPlan)
-
     //Location API
     const respLocation = await fetch (UrlGeo+location+"&maxRows=1&username="+GeoKey)
     try {
@@ -89,8 +88,7 @@ app.post('/travel', async function(req, res){
         }
         
         console.log(dataLocation);    
-        travelData.unshift(cordinatesResults);
-         
+        travelData.unshift(cordinatesResults);         
             //****** Wather API ******* 
             // if the planned date is not more than 6 days away from the actual date
             if (fullYearPlan <=  fullYearActual_6 && fullYearActual <= fullYearPlan ) {
@@ -145,7 +143,6 @@ app.post('/travel', async function(req, res){
                 }
 
                 travelData.unshift(weatherResults)
-
             // if the planned date has already happened    
             }else{
                 const temp = "N/A"
@@ -156,31 +153,28 @@ app.post('/travel', async function(req, res){
 
                 travelData.unshift(weatherResults)
             }
-        
             // Pixabay API for Images
             const respImg = await fetch (UrlPix+"key="+PixKey+"&q="+countryName+"+"+"tradition")
             try {
                 const dataImage = await respImg.json();
 
-                const { webformatURL } = dataImage.hits[0]
+               const  { webformatURL }  = dataImage.hits[0]
 
-                const Imageresult = {
+               const Imageresult = {
                     webformatURL
-                }
+               }
 
                 console.log(Imageresult)
                 travelData.unshift(Imageresult);
-    
+                
             }catch(error){
-            console.log('error', error)
+                console.log('error', error)
             }
-        
             // restcountries API for Countries Information
             const respCountry = await fetch (Urlcountry+countryName)
             try {
                 const dataCountry = await respCountry.json();
-
-    
+                
                 const {name}  = dataCountry[0]
                 const { currencies } = dataCountry[0]
                 const money = currencies[0].name
@@ -188,22 +182,22 @@ app.post('/travel', async function(req, res){
                 const leng  = languages[0].name
 
                 const countryResults = {
-                name,
-                money,
-                leng
+                  name,
+                  money,
+                  leng
                 }
 
                 console.log(countryResults)
                 travelData.unshift(countryResults);
-    
+                
             }catch(error){
                 console.log('error', error)
             }
-
+        
+            res.send(travelData);
     }catch(error){
         console.log('error', error)
     }
 })   
-
 //Get Route: data is sent
 app.get('/response', (req, res)=>{res.send(travelData);});
