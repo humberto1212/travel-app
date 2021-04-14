@@ -19,8 +19,9 @@ const postData = async (url = '', data = {})=>{
       }
     }
 
-document.getElementById('generate').addEventListener('click', action);
-document.getElementById('generate').addEventListener('click', date);
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('generate').addEventListener('click', action);
+});
 
 function action() {
     // check what input was entered into the location field
