@@ -7,7 +7,7 @@ The functionality is that the user enters a location and an upcoming travel date
 [Geonames](http://www.geonames.org/export/web-services.html) -
 [Weatherbit](https://www.weatherbit.io/account/create) -
 [Pixabay](https://pixabay.com/api/docs/) -
-[restcountries](https://restcountries.eu/) -
+[restcountries](https://restcountries.eu/) 
 
 ## Specifications
 ### The project was written with:
@@ -55,7 +55,7 @@ The functionality is that the user enters a location and an upcoming travel date
 
 #### Step 1: Signup for an API key
 
-- Go to [Geonames](http://www.geonames.org/export/web-services.html), [Weatherbit} (https://www.weatherbit.io/account/create), [Pixabay](https://pixabay.com/api/docs/), [restcountries](https://restcountries.eu/)  and get your API key.
+- Go to [Geonames](http://www.geonames.org/export/web-services.html), [Weatherbit](https://www.weatherbit.io/account/create), [Pixabay](https://pixabay.com/api/docs/), [restcountries](https://restcountries.eu/)  and get your API key.
 - Create an `.env` file and add the API_KEY in this file.
 
 #### Step 2: Deployment
