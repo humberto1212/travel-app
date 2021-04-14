@@ -5,7 +5,7 @@ The functionality is that the user enters a location and an upcoming travel date
 ## API's 
 ### This project makes use of: 
 [Geonames](http://www.geonames.org/export/web-services.html) -
-[Weatherbit}(https://www.weatherbit.io/account/create) -
+[Weatherbit](https://www.weatherbit.io/account/create) -
 [Pixabay](https://pixabay.com/api/docs/) -
 [restcountries](https://restcountries.eu/) -
 
