@@ -10,11 +10,14 @@ const updateUI = async () => {
         const allData = await request.json(); 
         const imgSrc = allData[1].webformatURL
         document.getElementById('img-Country').innerHTML = `<img alt="" src="${imgSrc}">`;
-        document.getElementById('resut-country').innerHTML = countryName + allData[0].name;
-        document.getElementById('resut-currency').innerHTML = currencyName + allData[0].money;
-        document.getElementById('resut-lenguage').innerHTML = lenguageName + allData[0].leng;
-        document.getElementById('resut-temp').innerHTML = temperatur + allData[2].temp + Celsius;
-  
+        document.getElementById('resut-country').innerHTML = `${countryName} ${allData[0].name}`; 
+        document.getElementById('resut-currency').innerHTML = `${currencyName} ${allData[0].money}`; 
+        document.getElementById('resut-lenguage').innerHTML = `${lenguageName} ${allData[0].leng}`;
+        if (allData[2].temp === "N/A"){
+            document.getElementById('resut-temp').innerHTML = `${temperatur} ${allData[2].temp}`
+        }else{
+            document.getElementById('resut-temp').innerHTML = `${temperatur} ${allData[2].temp} ${Celsius}`;
+        } 
     }catch(error){
         console.log("error", error)
     }
