@@ -1,4 +1,6 @@
-const postData = async (url = '', data = {})=>{
+import {updateUI} from './updateUI.js'
+
+ const postData = async (url = '', data = {})=>{
     console.log(data);
       const response = await fetch(url, {
       method: 'POST', 
@@ -18,12 +20,12 @@ const postData = async (url = '', data = {})=>{
       console.log("error", error);
       }
     }
-
+    
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('generate').addEventListener('click', action);
 });
 
-function action() {
+const action = () => {
     // check what input was entered into the location field
     let newLocation = document.getElementById('location').value;
     const myDate = document.getElementById('date').value;
