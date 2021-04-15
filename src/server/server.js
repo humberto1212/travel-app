@@ -64,7 +64,6 @@ const fullYearActual_6 = yearActual + "-" + monthActual + "-" + dayActual_6
 const fullYearActual_16 = yearActual + "-" + monthActual + "-" + dayActual_16
 
 // Post request
-
 app.post('/travel', async function(req, res){
     const {location, date } = req.body
 
@@ -93,8 +92,8 @@ app.post('/travel', async function(req, res){
             // if the planned date is not more than 6 days away from the actual date
             if (fullYearPlan <=  fullYearActual_6 && fullYearActual <= fullYearPlan ) {
            
-                const respWeather = await fetch (UrlWeatherNow+"&"+"lat="+lat+"&"+"lon="+lng+"&key="+WeatherKey)
-                try {
+                const respWeather = await fetch (`${UrlWeatherNow}&lat=${lat}&lon=${lng}+&key=${WeatherKey}`)
+                try {                              
                     const dataWeather = await respWeather.json();
 
                     const weather = dataWeather.data[0]
@@ -112,8 +111,8 @@ app.post('/travel', async function(req, res){
                 }
             // if the planned date is not more than 16 days away from the actual date    
             }else if(fullYearPlan <= fullYearActual_16 && fullYearActual <= fullYearPlan ){
-                const respWeather = await fetch (UrlWeather16+"&"+"lat="+lat+"&"+"lon="+lng+"&key="+WeatherKey)
-                try {
+                const respWeather = await fetch (`${UrlWeather16}&lat=${lat}&lon=${lng}&key=${WeatherKey}`)
+                try {                           
                     const dataWeather = await respWeather.json();
 
                     //days away - to calculate the position within the array
@@ -154,8 +153,8 @@ app.post('/travel', async function(req, res){
                 travelData.unshift(weatherResults)
             }
             // Pixabay API for Images
-            const respImg = await fetch (UrlPix+"key="+PixKey+"&q="+countryName+"+"+"tradition")
-            try {
+            const respImg = await fetch (`${UrlPix}key=${PixKey}&q=${countryName}+tradition`)
+            try {                          
                 const dataImage = await respImg.json();
 
                const  { webformatURL }  = dataImage.hits[0]
