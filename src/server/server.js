@@ -59,9 +59,9 @@ const dayActual_6 = d.getDate()+6;
 const dayActual_16 = d.getDate()+16;
 const monthActual = d.getMonth() + 1;
 const yearActual = d.getFullYear();
-const fullYearActual = yearActual + "-" + monthActual + "-" + dayActual
-const fullYearActual_6 = yearActual + "-" + monthActual + "-" + dayActual_6 
-const fullYearActual_16 = yearActual + "-" + monthActual + "-" + dayActual_16
+const fullYearActual = `${yearActual}-${monthActual}-${dayActual}`
+const fullYearActual_6 = `${yearActual}-${monthActual}-${dayActual_6}`
+const fullYearActual_16 = `${yearActual}-${monthActual}-${dayActual_16}`
 
 // Post request
 app.post('/travel', async function(req, res){
