@@ -58,12 +58,19 @@ body {
         .submit {
             grid-row: 4;
             grid-column: 1;
+            
             button{
                 border-radius: 30px;
                 width: 100px;
                 height: 25px;
                 border:none;
                 background: #FFFFFF;
+                
+                &:hover {
+                    transition: 400ms;
+                    background-color: #E82E00;
+                    color: white;
+                }
             }
         }
     }
