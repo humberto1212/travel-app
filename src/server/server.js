@@ -69,6 +69,13 @@ app.post('/travel', async function(req, res){
 
     const { yearPlan, monthPlan, dayPlan, fullYearPlan} = datePlan(date);
     
+       // Days left
+    let { days, hours, minutes, seconds, time } = timeLeft(date)
+    const countDown = {
+        time
+    }   
+    travelData.unshift(countDown) 
+    
     console.log(fullYearPlan)
     //Location API
     const respLocation = await fetch (UrlGeo+location+"&maxRows=1&username="+GeoKey)
