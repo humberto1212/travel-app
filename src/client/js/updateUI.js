@@ -21,6 +21,7 @@ const updateUI = async () => {
     }catch(error){
         console.log("error", error)
     }
+    document.getElementById('resut-time').innerHTML = `Time remaining for the trip: ${allData[4].time}`;
 }
 
 export {updateUI}
