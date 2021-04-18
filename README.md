@@ -7,7 +7,7 @@ The functionality is that the user enters a location and an upcoming travel date
 [Geonames](http://www.geonames.org/export/web-services.html) -
 [Weatherbit](https://www.weatherbit.io/account/create) -
 [Pixabay](https://pixabay.com/api/docs/) -
-[restcountries](https://restcountries.eu/) 
+[Restcountries](https://restcountries.eu/) 
 
 ## Specifications
 ### The project was written with:
@@ -26,36 +26,36 @@ The functionality is that the user enters a location and an upcoming travel date
 - Jest
 
 ### Dependencies:
-"@types/date-fns": "^2.6.0",
-    "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
-    "date-fns": "^2.20.1",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "node-fetch": "^2.6.1"
+`"@types/date-fns": "^2.6.0"` -
+    `"body-parser": "^1.19.0"` -
+    `"cors": "^2.8.5"` -
+    `"date-fns": "^2.20.1"` -
+    `dotenv": "^8.2.0"` -
+    `express": "^4.17.1"` -
+    `node-fetch": "^2.6.1"`
 ### devDependencies:
-"@babel/core": "^7.13.14",
-    "@babel/preset-env": "^7.13.12",
-    "babel-loader": "^8.2.2",
-    "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^5.2.0",
-    "html-webpack-plugin": "^5.3.1",
-    "jest": "^26.6.3",
-    "mini-css-extract-plugin": "^1.4.0",
-    "node-sass": "^5.0.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.4",
-    "sass-loader": "^11.0.1",
-    "style-loader": "^2.0.0",
-    "terser-webpack-plugin": "^5.1.1",
-    "webpack": "^5.28.0",
-    "webpack-cli": "^4.6.0",
-    "webpack-dev-server": "^3.11.0"
+`"@babel/core": "^7.13.14"` -
+    `"@babel/preset-env": "^7.13.12"` -
+    `"babel-loader": "^8.2.2"` -
+    `"clean-webpack-plugin": "^3.0.0"` -
+    `"css-loader": "^5.2.0"` -
+    `"html-webpack-plugin": "^5.3.1"` -
+    `"jest": "^26.6.3"` -
+    `"mini-css-extract-plugin": "^1.4.0"` -
+    `"node-sass": "^5.0.0"` -
+    `"optimize-css-assets-webpack-plugin": "^5.0.4"` -
+    `"sass-loader": "^11.0.1"` -
+    `"style-loader": "^2.0.0"` -
+    `"terser-webpack-plugin": "^5.1.1"` -
+    `"webpack": "^5.28.0"` -
+    `"webpack-cli": "^4.6.0"` -
+    `"webpack-dev-server": "^3.11.0"`
     
 ## Installation
 
 #### Step 1: Signup for an API key
 
-- Go to [Geonames](http://www.geonames.org/export/web-services.html), [Weatherbit](https://www.weatherbit.io/account/create), [Pixabay](https://pixabay.com/api/docs/), [restcountries](https://restcountries.eu/)  and get your API key.
+- Go to [Geonames](http://www.geonames.org/export/web-services.html), [Weatherbit](https://www.weatherbit.io/account/create), [Pixabay](https://pixabay.com/api/docs/), [Restcountries](https://restcountries.eu/)  and get your API key.
 - Create an `.env` file and add the API_KEY in this file.
 
 #### Step 2: Deployment
