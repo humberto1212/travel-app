@@ -74,5 +74,6 @@ The functionality is that the user enters a location and an upcoming travel date
 
 ## Image
 
-<img width="448" alt="travelApp_photo" src="https://user-images.githubusercontent.com/71103179/116449318-57e3c500-a85a-11eb-97b3-4e2561af4d00.png">
+<img width="598" alt="Captura de Pantalla 2021-04-28 a la(s) 9 16 07 p  m" src="https://user-images.githubusercontent.com/71103179/116460217-17d70f00-a867-11eb-9aec-da905d1dfd37.png">
+
 
