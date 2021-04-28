@@ -71,3 +71,8 @@ The functionality is that the user enters a location and an upcoming travel date
 - `npm run prod` to generate a dist folder for prod
 
 - `npm start` to run the Express server on port 8081
+
+## Image
+
+<img width="448" alt="travelApp_photo" src="https://user-images.githubusercontent.com/71103179/116449318-57e3c500-a85a-11eb-97b3-4e2561af4d00.png">
+
