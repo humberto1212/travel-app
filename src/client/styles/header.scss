@@ -7,14 +7,17 @@
 h1 {
     color: #FA4A0C;
     letter-spacing: 8px;
-    margin-left: 30px;
-    margin-bottom: -20px;  
+    margin-bottom: -20px;
+    font-size: 21px;
+    margin-bottom: 20px; 
 }
 
 @include tablet{
 
 
     h1 {
-        font-size: 50px;
+        font-size: 60px;
+        margin-bottom: 0px;
+        margin-left: 0px;
     }
 }
